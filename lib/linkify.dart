@@ -70,12 +70,16 @@ class LinkifyOptions {
   /// Excludes `.` at end of URLs.
   final bool excludeLastPeriod;
 
+  /// Excludes `)` at end of URLs.
+  final bool excludeClosingParenthesis;
+
   const LinkifyOptions({
     this.humanize = true,
     this.removeWww = false,
     this.looseUrl = false,
     this.defaultToHttps = false,
     this.excludeLastPeriod = true,
+    this.excludeClosingParenthesis = true,
   });
 }
 

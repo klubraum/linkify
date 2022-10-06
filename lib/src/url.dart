@@ -49,6 +49,12 @@ class UrlLinkifier extends Linkifier {
               originalUrl = originalUrl.substring(0, originalUrl.length - 1);
             }
 
+            if ((options.excludeClosingParenthesis) &&
+                originalUrl[originalUrl.length - 1] == ")") {
+              end = ")";
+              originalUrl = originalUrl.substring(0, originalUrl.length - 1);
+            }
+
             var url = originalUrl;
 
             if (!originalUrl.startsWith(_protocolIdentifierRegex)) {
